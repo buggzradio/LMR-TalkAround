@@ -43,8 +43,73 @@
   <p>
     LMR TalkAround hosts a linked radio system designed to connect ham radio operators with commercial radios. It supports multiple modes and provides a platform for seamless communication across different radio systems.
   </p>
+  <h4>Modes Linked:</h4>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; font-family: sans-serif;">
+  <div style="position: relative; background-color: #12AD2A; color: #030; padding: 10px 16px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    DMR
+    <div style="display: none; position: absolute; top: 120%; left: 50%; transform: translateX(-50%); background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 10; box-shadow: 0 0 10px #000;">
+      Network: PRIVATE<br>
+      TG: PRIVATE<br>
+      Status: Linked
+    </div>
+  </div>
+
+  <div style="position: relative; background-color: #12AD2A; color: #030; padding: 10px 16px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    YSF
+    <div style="display: none; position: absolute; top: 120%; left: 50%; transform: translateX(-50%); background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 10; box-shadow: 0 0 10px #000;">
+      Network: PRIVATE<br>
+      Room: PRIVATE<br>
+      Status: Linked
+    </div>
+  </div>
+
+  <div style="position: relative; background-color: #12AD2A; color: #030; padding: 10px 16px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    NXDN
+    <div style="display: none; position: absolute; top: 120%; left: 50%; transform: translateX(-50%); background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 10; box-shadow: 0 0 10px #000;">
+      Network: PRIVATE<br>
+      TG: PRIVATE<br>
+      Status: Linked
+    </div>
+  </div>
+
+  <div style="position: relative; background-color: #12AD2A; color: #030; padding: 10px 16px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    P25
+    <div style="display: none; position: absolute; top: 120%; left: 50%; transform: translateX(-50%); background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 10; box-shadow: 0 0 10px #000;">
+      Network: PRIVATE<br>
+      TG: PRIVATE<br>
+      Status: Linked
+    </div>
+  </div>
+
+  <div style="position: relative; background-color: #606060; color: #b0b0b0; padding: 10px 16px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+    D-Star
+    <div style="display: none; position: absolute; top: 120%; left: 50%; transform: translateX(-50%); background-color: #222; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 10; box-shadow: 0 0 10px #000;">
+      Network: PRIVATE<br>
+      Reflector: PRIVATE<br>
+      Status: Not Linked
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll("div[style*='position: relative']").forEach(mode => {
+    mode.addEventListener("mouseenter", () => {
+      const tip = mode.querySelector("div");
+      if (tip) tip.style.display = "block";
+    });
+    mode.addEventListener("mouseleave", () => {
+      const tip = mode.querySelector("div");
+      if (tip) tip.style.display = "none";
+    });
+  });
+</script>
+
+  </section>
+
+
   
   </section>
+
 
 <section class="content-block">
     <h3>Last Heard</h3>
@@ -56,6 +121,9 @@
 
 
   </main>
+
+<div class="parallax" style="  min-height: 500px;"></div>
+
 
   <footer>
     &copy; 2025 LMR TalkAround. All rights reserved.
