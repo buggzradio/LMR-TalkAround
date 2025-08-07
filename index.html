@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LMR TalkAround</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header id="page-header">
+    <div class="header-brand">
+      <img src="/assets/lmrlogo.png" alt="LMR Logo" class="headerlogo" />
+      <div class="site-title">LMR TalkAround</div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/lmr-lrs/">LMR LRS</a>
+    </nav>
+  </header>
+
+
+<section class="welcome-section">
+  <h2>Welcome to LMR TalkAround!</h2>
+  <p>
+    <em>Connecting Hams with Commercial Radios</em>
+  </p>
+  <h3>About Us:</h3>
+  <p style="font-size: 14px;">LMR TalkAround Info</p>
+</section>
+
+
+<section class="content-block">
+  <h3>LMR Linked Radio System (LRS)</h3>
+  <p>The LMR TalkAround LRS is a Multi-Mode Reflector hosted on DVSwitch for licensed amateur radio operators to use.</p>
+  <button class="btn-primary" onclick="location.href='/lmr-lrs/'">Learn More</button>
+</section>
+
+
+
+<div class="parallax" style="  min-height: 350px;"></div>
+
+
+</main>
+
+  <footer>
+    &copy; 2025 LMR TalkAround. All rights reserved.
+  </footer>
+
+
+  <script>
+    const header = document.getElementById('page-header');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function onScroll() {
+      const currentScrollY = window.scrollY;
+      // Shrink header after 20px
+      if (currentScrollY > 20) {
+        header.classList.add('header-shrink');
+      } else {
+        header.classList.remove('header-shrink');
+      }
+      // Hide header when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        header.classList.add('header-hide');
+      } else {
+        header.classList.remove('header-hide');
+      }
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    });
+  </script>
+
+</body>
+</html>

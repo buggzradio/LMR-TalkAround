@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linked Radio System | LMR TalkAround</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<style>
+
+    iframe {
+      width: 650px;
+      border: none;
+      height: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: white;
+    }
+</style>
+
+<body>
+
+  <header>
+    <div class="site-title">LMR TalkAround</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/lmr-lrs/">LMR LRS</a>
+    </nav>
+  </header>
+
+  <main>
+<section class="welcome-section">
+  <h2>LMR TalkAround Linked Radio System</h2>
+  <p>
+   A Multi-Mode Reflector System for use by Ham Radio Operators
+  </p>
+</section>
+
+<section class="content-block">
+  <h3>About The LRS</h3>
+  <p>
+    LMR TalkAround hosts a linked radio system designed to connect ham radio operators with commercial radios. It supports multiple modes and provides a platform for seamless communication across different radio systems.
+  </p>
+  
+  </section>
+
+<section class="content-block">
+    <h3>Last Heard</h3>
+  <div class="iframe-container">
+    <iframe src="https://legacy.lmrtalkaround.com/dvswitch/include/lh.php"></iframe>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 LMR TalkAround. All rights reserved.
+  </footer>
+
+    <script>
+        const header = document.getElementById('page-header');
+        window.addEventListener('scroll', () => {
+        if(window.scrollY > 20) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        });
+    </script>    
+</body>
+</html>

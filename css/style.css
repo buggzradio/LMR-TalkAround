@@ -1,0 +1,176 @@
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000; /* pure black */
+      color: #e0e0e0;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+    header {
+      background-color: #100000; /* very dark red-black mix */
+      padding: 30px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease, padding 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1);
+      user-select: none;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .headerlogo {
+      width: 100px;
+      height: auto;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    header.header-shrink {
+      padding: 10px 20px;
+    }
+
+    header.header-hide {
+      transform: translateY(-100%);
+    }
+
+    header.scrolled {
+      background-color: #800000; /* medium bright red */
+      color: #fff;
+    }
+
+    .site-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #cc2222; /* medium bright red */
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    nav a {
+      color: #cc2222;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 25px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      user-select: none;
+      text-shadow: 0 0 4px #cc2222;
+    }
+
+    nav a:hover {
+      color: #ff4444;
+      text-decoration: underline;
+      text-shadow: 0 0 10px #ff4444;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #eee;
+      user-select: text;
+        flex-grow: 1;
+
+    }
+
+    .welcome-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #cc2222;
+  text-align: center;
+  user-select: text;
+}
+
+.welcome-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #eee;
+  text-shadow: 0 0 4px #660000;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/assets/lmrlogo.png");
+  opacity: 0.3;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  margin-top: 100px;
+}
+
+.content-block {
+  max-width: 1000px;
+  min-width: 600px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #cc2222;
+}
+
+button.btn-primary {
+  background-color: #cc2222;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-shadow: 0 0 4px #660000;
+  user-select: none;
+  text-decoration: none;
+}
+
+button.btn-primary:hover {
+  background-color: #ff4444;
+  transform: scale(1.05);
+}
+
+    footer {
+      background-color: #100000;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      color: #880000;
+      user-select: none;
+      text-shadow: 0 0 3px #880000;
+    }
