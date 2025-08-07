@@ -1,25 +1,21 @@
-name: Auto Merge Pull Requests by Henry Bartz
+name: Auto Merge Pull Requests
 
 on:
   pull_request:
-    types: [opened, labeled, reopened, synchronize]
+    types: [opened, reopened, synchronize]
 
 jobs:
   automerge:
-    if: github.actor == 'BuggzRadio-AZD'  # <-- Replace with your GitHub username if different
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Auto merge
+      - name: Auto merge PR
         uses: pascalgn/automerge-action@v0.16.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use your PAT here
           MERGE_METHOD: squash
-          MERGE_COMMIT_MESSAGE: pull-request-title
-          MERGE_LABELS: ""  # Leave empty if you don’t want to require a label
